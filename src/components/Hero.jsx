@@ -1,14 +1,8 @@
 import Reveal from './Reveal'
-import Floating from './Floating'
 
 export default function Hero() {
   return (
     <header className="hero" id="inicio">
-      <Floating className="hero-card" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=85" alt="" loading="lazy" />
-        <span className="hero-card-tag mono">Último corte</span>
-      </Floating>
-
       <div className="hero-inner wrap">
         <div className="hero-grid">
           <Reveal>
