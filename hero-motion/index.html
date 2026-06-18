@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinematic Hero — Motion Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. Escena: imagen de fondo full screen + 2. overlay + 3. texto centrado -->
+  <section class="hero" id="hero">
+
+    <!-- Dos capas de fondo para poder hacer crossfade entre una imagen y la siguiente -->
+    <div class="hero__bg" data-layer="a"></div>
+    <div class="hero__bg" data-layer="b"></div>
+
+    <!-- Capa oscura + viñeta para contraste y profundidad -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Texto centrado, animado por JS (clase is-animating dispara el keyframe) -->
+    <div class="hero__stage">
+      <h1 class="hero__text" id="heroText" aria-live="polite"></h1>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
