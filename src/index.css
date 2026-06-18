@@ -12,20 +12,24 @@
 }
 
 :root {
-  --bg: #0b0907;
-  --bg-2: #120f0b;
-  --surface: #18130e;
-  --surface-2: #201912;
-  --line: #2d2519;
-  --line-soft: #211a13;
-  --text: #e9e0d1;
-  --cream: #f6efe1;
-  --muted-text: #a19785;
-  --dim: #6e6454;
-  --gold: #c9a86a;
-  --gold-2: #e0c184;
-  --danger: #d09b7b;
-  --shadow: rgba(0, 0, 0, .35);
+  /* Paleta clara cálida ("papel"). Los nombres son herencia del tema oscuro original:
+     --cream/--text siguen significando "color de título"/"color de cuerpo", solo que
+     ahora son oscuros sobre fondo claro. .hero, .case-content y .ba-stage sobre-escriben
+     estas mismas variables porque su contenido va encima de fotos oscuras. */
+  --bg: #f7f1e6;
+  --bg-2: #efe6d4;
+  --surface: #fffbf2;
+  --surface-2: #f3ead8;
+  --line: #ddccaa;
+  --line-soft: #ece2cb;
+  --text: #3a3128;
+  --cream: #1c1712;
+  --muted-text: #7c6f5c;
+  --dim: #948566;
+  --gold: #9c7a3c;
+  --gold-2: #b6904f;
+  --danger: #9c5a3c;
+  --shadow: rgba(60, 45, 25, .16);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -67,8 +71,8 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -107,7 +111,8 @@ textarea {
 }
 
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: .69rem;
   letter-spacing: .19em;
   text-transform: uppercase;
@@ -131,8 +136,8 @@ textarea {
 }
 
 .display {
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: clamp(2.1rem, 4.6vw, 3.9rem);
   line-height: 1.06;
   letter-spacing: -.035em;
@@ -158,7 +163,7 @@ h1 em,
   background: var(--gold);
   color: var(--bg);
   text-decoration: none;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .72rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -182,7 +187,7 @@ h1 em,
 .btn.secondary:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 168, 106, .07);
+  background: rgba(156, 122, 60, .10);
 }
 
 .btn .arr {
@@ -200,13 +205,25 @@ nav {
   z-index: 100;
   border-bottom: 1px solid transparent;
   transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease;
+
+  /* Arriba del todo la nav es transparente y va sobre la foto del hero: texto claro */
+  --cream: #fffaf0;
+  --muted-text: #cdc0a8;
+  --gold: #e0c184;
+  --bg: #0b0907;
 }
 
 nav.scrolled,
 nav.open {
-  background: rgba(11, 9, 7, .86);
+  background: rgba(247, 241, 230, .86);
   backdrop-filter: blur(18px);
   border-bottom-color: var(--line-soft);
+
+  /* Con scroll (o el menú móvil abierto) la nav ya tiene fondo propio: vuelve al tema claro */
+  --cream: #1c1712;
+  --muted-text: #7c6f5c;
+  --gold: #9c7a3c;
+  --bg: #f7f1e6;
 }
 
 .nav-inner {
@@ -220,7 +237,7 @@ nav.open {
 }
 
 .logo {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 1.13rem;
   letter-spacing: .035em;
@@ -314,6 +331,15 @@ nav.open .burger span::after { top: 0; transform: rotate(-45deg); }
   position: relative;
   overflow: hidden;
   padding: 8rem 0 5rem;
+
+  /* El hero siempre va sobre una foto oscura, sin importar el tema del resto del sitio */
+  --bg: #0b0907;
+  --text: #f3ead8;
+  --cream: #fffaf0;
+  --muted-text: #cdc0a8;
+  --gold: #e0c184;
+  --gold-2: #efd9a3;
+  --dim: #a89a82;
 }
 
 .hero-bg {
@@ -427,9 +453,9 @@ nav.open .burger span::after { top: 0; transform: rotate(-45deg); }
 }
 
 h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 7.2vw, 6.25rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: .96;
   letter-spacing: -.055em;
   color: var(--cream);
@@ -450,9 +476,9 @@ h1 {
 
 /* Titular animado: misma tipografía que h1, pero cicla con zoom + blur + fade */
 .hero-headline {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 7.2vw, 6.25rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: .96;
   letter-spacing: -.055em;
   color: var(--cream);
@@ -561,7 +587,7 @@ h1 {
 
 .proof-k {
   display: block;
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   line-height: 1;
   color: var(--gold);
@@ -660,7 +686,7 @@ section::before {
 }
 
 .pain-n {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 2.05rem;
   line-height: 1;
@@ -668,7 +694,7 @@ section::before {
 }
 
 .pain h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.55rem;
   font-weight: 400;
   color: var(--cream);
@@ -691,7 +717,7 @@ section::before {
 
 .diag-card {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(32,25,18,.82), rgba(18,15,11,.86));
+  background: linear-gradient(180deg, rgba(255,251,242,.92), rgba(243,234,216,.94));
   padding: 2.2rem;
   box-shadow: 0 24px 60px var(--shadow);
   position: sticky;
@@ -699,7 +725,7 @@ section::before {
 }
 
 .diag-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 1.65rem;
   color: var(--cream);
@@ -758,7 +784,7 @@ section::before {
 }
 
 .step h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--cream);
@@ -793,8 +819,8 @@ section::before {
 
 .breaker-quote {
   position: relative;
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: clamp(1.6rem, 4vw, 2.9rem);
   line-height: 1.28;
   letter-spacing: -.01em;
@@ -853,11 +879,11 @@ section::before {
 .svc:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
-  background: #1c160f;
+  background: var(--surface-2);
 }
 
 .svc.featured {
-  background: linear-gradient(180deg, #221a10, var(--surface));
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
   border-color: var(--gold);
 }
 
@@ -869,7 +895,7 @@ section::before {
   background: var(--gold);
   color: var(--bg);
   padding: .4rem .75rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .55rem;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -882,7 +908,7 @@ section::before {
 }
 
 .svc h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.03;
@@ -891,7 +917,7 @@ section::before {
 }
 
 .svc-for {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   color: var(--gold);
   font-style: italic;
   margin-bottom: 1.35rem;
@@ -928,7 +954,7 @@ section::before {
 .svc-link {
   color: var(--cream);
   text-decoration: none;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .7rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -1015,6 +1041,11 @@ section::before {
   inset: auto 0 0;
   z-index: 2;
   padding: 1.6rem;
+
+  /* El caption va sobre la foto del proyecto: texto claro sin importar el tema */
+  --cream: #fffaf0;
+  --gold: #e0c184;
+  --text: #f3ead8;
 }
 
 .case-kicker {
@@ -1023,7 +1054,7 @@ section::before {
 }
 
 .case h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.1;
@@ -1043,7 +1074,7 @@ section::before {
   background: rgba(11,9,7,.46);
   padding: .35rem .55rem;
   font-size: .68rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: .06em;
   text-transform: uppercase;
 }
@@ -1076,6 +1107,10 @@ section::before {
   cursor: ew-resize;
   background: var(--surface);
   box-shadow: 0 24px 60px var(--shadow);
+
+  /* Las etiquetas Antes/Después van sobre las fotos: texto claro sin importar el tema */
+  --cream: #fffaf0;
+  --gold: #e0c184;
 }
 
 .ba-img {
@@ -1121,7 +1156,7 @@ section::before {
   color: var(--cream);
   border: 1px solid var(--line);
   padding: .35rem .62rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .58rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -1167,7 +1202,7 @@ section::before {
   font-size: .66rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* PROCESS */
@@ -1203,7 +1238,7 @@ section::before {
 }
 
 .process-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.45rem;
   font-weight: 400;
   color: var(--cream);
@@ -1236,7 +1271,7 @@ section::before {
 }
 
 .about-text p:not(.eyebrow) {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.35rem, 2.2vw, 1.78rem);
   line-height: 1.42;
   color: var(--muted-text);
@@ -1263,9 +1298,9 @@ section::before {
 }
 
 .stat-n {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 3.45rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   color: var(--gold);
 }
@@ -1308,7 +1343,7 @@ section::before {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.28rem;
   line-height: 1.2;
   transition: color .25s ease;
@@ -1320,7 +1355,7 @@ section::before {
 
 .faq-plus {
   color: var(--gold);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.45rem;
   transition: transform .25s ease;
@@ -1371,8 +1406,8 @@ section::before {
 }
 
 .cta h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: clamp(2.6rem, 6vw, 4.9rem);
   line-height: .98;
   letter-spacing: -.04em;
@@ -1414,7 +1449,7 @@ section::before {
   text-decoration: none;
   border: 1px solid var(--line);
   padding: .72rem 1rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .68rem;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -1441,7 +1476,7 @@ footer {
 }
 
 .foot-logo {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   color: var(--cream);
   font-size: 1.05rem;
 }
@@ -1451,7 +1486,7 @@ footer {
   font-size: .64rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 980px) {
@@ -1475,7 +1510,7 @@ footer {
     gap: 0;
     padding: .6rem;
     border: 1px solid var(--line);
-    background: rgba(18,15,11,.96);
+    background: rgba(253,248,238,.96);
     backdrop-filter: blur(18px);
     box-shadow: 0 24px 60px var(--shadow);
   }
