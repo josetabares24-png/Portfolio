@@ -4,20 +4,20 @@ import Reveal from './Reveal'
 
 const QUESTIONS = [
   {
-    q: '¿Trabajas con creadores pequeños?',
-    a: 'Sí. De hecho, muchas veces ahí se nota más el cambio porque todavía hay margen para ordenar nicho, formatos, ganchos y métricas desde la base.',
+    q: '¿Esta página es oficial?',
+    a: 'No. Es un proyecto independiente, sin afiliación a ningún gobierno, ONG u organismo. No recibimos donaciones ni gestionamos datos de personas: solo enlazamos a las fuentes oficiales y plataformas ciudadanas que ya existen.',
   },
   {
-    q: '¿Solo editas o también ayudas con ideas?',
-    a: 'También ayudo con ideas, estructura y lectura de métricas. La edición final mejora mucho cuando la idea ya viene con una promesa clara.',
+    q: '¿Por qué hay varias plataformas para buscar a una persona y no una sola?',
+    a: 'Cada plataforma (Cruz Roja, Venezuela Te Busca, Encuéntralos, etc.) se construyó por separado y tiene registros distintos. Mientras no exista una base unificada oficial, reportar en varias a la vez aumenta las probabilidades de que alguien vea tu caso.',
   },
   {
-    q: '¿Qué necesito enviarte para empezar?',
-    a: 'Tu canal o perfil, 2–3 videos recientes, el material en bruto si quieres edición y una idea clara de qué quieres mejorar: retención, estética, ritmo, clics o consistencia.',
+    q: '¿Qué hago si un enlace está roto o desactualizado?',
+    a: 'Escríbenos por el correo o redes de abajo con el enlace exacto y qué encontraste. Esta página se revisa a mano, así que toda corrección ayuda a quien la use después.',
   },
   {
-    q: '¿Y si no sé qué servicio necesito?',
-    a: 'Empieza por una auditoría. Si después no hace falta trabajar juntos, igual te llevas una lectura honesta de qué cambiar en tus próximos videos.',
+    q: '¿Cómo evito caer en una estafa al donar?',
+    a: 'Dona solo a organizaciones con trayectoria verificable, nunca a una cuenta personal "para los damnificados" que llegue por mensaje privado. Si algo en esta página te parece sospechoso, repórtalo: preferimos quitar un enlace a dejarlo si hay duda.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function FAQ() {
     <section className="faq" id="faq">
       <div className="wrap faq-grid">
         <Reveal>
-          <p className="eyebrow mono">Antes de escribirme</p>
+          <p className="eyebrow mono">Antes de usar esta página</p>
           <h2 className="display">Preguntas que conviene resolver <em>antes.</em></h2>
         </Reveal>
 

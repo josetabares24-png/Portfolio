@@ -4,18 +4,19 @@ export default function CTA() {
   return (
     <section className="cta" id="contacto">
       <Reveal className="wrap cta-inner">
-        <p className="eyebrow mono" style={{ textAlign: 'center' }}>El siguiente paso</p>
-        <h2>Envíame tu canal.<br />Te digo dónde está <em>perdiendo atención.</em></h2>
+        <p className="eyebrow mono" style={{ textAlign: 'center' }}>Ayuda a mejorar esto</p>
+        <h2>¿Conoces una fuente que falta,<br />o un enlace <em>que ya no funciona?</em></h2>
         <p className="cta-sub">
-          Mándame tu perfil o uno de tus videos. Si veo una oportunidad clara, hablamos de cómo trabajarlo. Si no, te digo qué podrías corregir por tu cuenta.
+          Esta página la mantiene una sola persona. Si tienes un enlace verificado para agregar, una corrección
+          o detectas algo sospechoso, avísame y lo reviso.
         </p>
 
         <div className="cta-actions">
           <a
-            href="mailto:josetabaresp@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20de%20mi%20canal&body=Hola%20Jos%C3%A9%2C%20te%20paso%20mi%20canal%20para%20que%20lo%20revises%3A%0A%0AMi%20objetivo%20es%3A%0A%0ALo%20que%20m%C3%A1s%20me%20cuesta%20ahora%20es%3A"
+            href="mailto:josetabaresp@gmail.com?subject=Correcci%C3%B3n%20o%20fuente%20para%20el%20centro%20de%20ayuda&body=Hola%20Jos%C3%A9%2C%20quiero%20reportar%20lo%20siguiente%20sobre%20la%20p%C3%A1gina%20del%20terremoto%3A%0A%0AEnlace%20o%20secci%C3%B3n%3A%0A%0ALo%20que%20encontr%C3%A9%3A"
             className="btn"
           >
-            Pedir auditoría por email <span className="arr">→</span>
+            Reportar por email <span className="arr">→</span>
           </a>
           <a href="https://www.instagram.com/josetabares24/" target="_blank" rel="noopener" className="btn secondary">
             Escribirme por Instagram

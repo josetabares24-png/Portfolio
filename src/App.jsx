@@ -1,13 +1,12 @@
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import Problem from './components/Problem'
-import Diagnosis from './components/Diagnosis'
+import QuePaso from './components/QuePaso'
+import BuscarPersonas from './components/BuscarPersonas'
 import Breaker from './components/Breaker'
-import Services from './components/Services'
-import Work from './components/Work'
-import BeforeAfter from './components/BeforeAfter'
-import Process from './components/Process'
-import About from './components/About'
+import FuentesOficiales from './components/FuentesOficiales'
+import ComoAyudar from './components/ComoAyudar'
+import QueHacer from './components/QueHacer'
+import SobreElProyecto from './components/SobreElProyecto'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -17,14 +16,13 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Problem />
-      <Diagnosis />
+      <QuePaso />
+      <BuscarPersonas />
       <Breaker />
-      <Services />
-      <Work />
-      <BeforeAfter />
-      <Process />
-      <About />
+      <FuentesOficiales />
+      <ComoAyudar />
+      <QueHacer />
+      <SobreElProyecto />
       <FAQ />
       <CTA />
       <Footer />

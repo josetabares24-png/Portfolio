@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 const LINKS = [
-  { href: '#problema', label: 'El problema' },
-  { href: '#diagnostico', label: 'Diagnóstico' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#trabajo', label: 'Trabajo' },
+  { href: '#que-paso', label: 'Qué pasó' },
+  { href: '#fuentes', label: 'Fuentes oficiales' },
+  { href: '#ayudar', label: 'Cómo ayudar' },
+  { href: '#sobre', label: 'Sobre esto' },
 ]
 
 export default function Nav() {
@@ -24,7 +24,7 @@ export default function Nav() {
     <nav className={[scrolled && 'scrolled', open && 'open'].filter(Boolean).join(' ')} aria-label="Navegación principal">
       <div className="nav-inner">
         <a className="logo" href="#inicio" aria-label="Ir al inicio" onClick={close}>
-          José Tabares<span className="mark" aria-hidden="true">✺</span>
+          Terremoto Venezuela<span className="mark" aria-hidden="true">✺</span>
         </a>
 
         <ul className="nav-links" id="navLinks">
@@ -33,7 +33,7 @@ export default function Nav() {
               <a href={link.href} onClick={close}>{link.label}</a>
             </li>
           ))}
-          <li><a className="nav-cta" href="#contacto" onClick={close}>Pedir auditoría</a></li>
+          <li><a className="nav-cta" href="#buscar" onClick={close}>Buscar o reportar →</a></li>
         </ul>
 
         <button
