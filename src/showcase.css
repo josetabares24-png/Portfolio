@@ -36,3 +36,7 @@
 .case-secondary figcaption{font-family:var(--mono);font-size:11px;line-height:1.55;color:#586360;max-width:420px}
 @media(max-width:620px){.work-media{aspect-ratio:.96}.work-media-caption{font-size:9px;padding:40px 12px 14px}.case-art.real-project-visual{padding:22px 18px 12px}.case-art.real-project-visual picture{height:clamp(350px,112vw,630px)}.case-art--photography>img{height:clamp(350px,100vw,580px)}.case-secondary,.case-secondary--photo{padding:0 18px 28px;grid-template-columns:1fr;gap:13px}.case-secondary>img{max-height:530px;max-width:100%}.case-secondary figcaption{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.work-media img{transition:none!important}.work-visual:hover .work-media img{transform:none!important}}
+
+/* Touch-first real work previews: desktop retains image hover, mobile shows images directly. */
+.index-mobile-thumb{display:none}
+@media(max-width:620px){.index-row{padding-right:90px}.index-mobile-thumb{display:block;position:absolute;right:2px;top:50%;width:69px;height:80px;object-fit:cover;object-position:center top;transform:translateY(-50%);border:1px solid #636964}.index-row[data-project=sabores] .index-mobile-thumb{object-position:center center}}
