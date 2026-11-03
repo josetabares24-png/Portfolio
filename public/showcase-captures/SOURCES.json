@@ -1,0 +1,57 @@
+{
+  "createdAt": "2026-11-03T20:11:08.195Z",
+  "files": [
+    {
+      "filename": "estaba-en-lisboa-desktop.jpg",
+      "source": "https://estabaenlisboa.com/",
+      "finalUrl": "https://estabaenlisboa.com/",
+      "title": "Lisboa: qué ver, rutas y transporte | Estaba en Lisboa",
+      "viewport": {
+        "key": "desktop",
+        "width": 1440,
+        "height": 920,
+        "isMobile": false
+      },
+      "capturedAt": "2026-11-03T20:11:13.045Z"
+    },
+    {
+      "filename": "estaba-en-lisboa-mobile.jpg",
+      "source": "https://estabaenlisboa.com/",
+      "finalUrl": "https://estabaenlisboa.com/",
+      "title": "Lisboa: qué ver, rutas y transporte | Estaba en Lisboa",
+      "viewport": {
+        "key": "mobile",
+        "width": 390,
+        "height": 844,
+        "isMobile": true
+      },
+      "capturedAt": "2026-11-03T20:11:16.759Z"
+    },
+    {
+      "filename": "mil-sabores-desktop.jpg",
+      "source": "https://www.milsaboresbrunch.com/",
+      "finalUrl": "https://www.milsaboresbrunch.com/",
+      "title": "Mil Sabores | Brunch e pequeno-almoço na Baixa de Lisboa",
+      "viewport": {
+        "key": "desktop",
+        "width": 1440,
+        "height": 920,
+        "isMobile": false
+      },
+      "capturedAt": "2026-11-03T20:11:22.491Z"
+    },
+    {
+      "filename": "mil-sabores-mobile.jpg",
+      "source": "https://www.milsaboresbrunch.com/",
+      "finalUrl": "https://www.milsaboresbrunch.com/",
+      "title": "Mil Sabores | Brunch e pequeno-almoço na Baixa de Lisboa",
+      "viewport": {
+        "key": "mobile",
+        "width": 390,
+        "height": 844,
+        "isMobile": true
+      },
+      "capturedAt": "2026-11-03T20:11:26.405Z"
+    }
+  ]
+}
