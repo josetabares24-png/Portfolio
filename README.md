@@ -1,30 +1,45 @@
-# Portafolio comercial — rediseño editorial v3
+# Portafolio — propuesta de estudio independiente V4
 
-Esta rama crea una web independiente de diseño y desarrollo web, con una estética propia y foco en captar solicitudes de presupuestos. No se ha seleccionado nombre comercial definitivo; José Tabares aparece como identificador personal provisional.
+**Estado: VISTA PREVIA; pendiente de aprobación estética y de publicación.**
 
-## Arquitectura
-- Dos páginas HTML reales: `/` (español) y `/pt/` (portugués de Portugal), compiladas como multipágina por Vite.
-- Estilos compartidos en `src/site.css`; `src/site.js` solo se usa para menú móvil y copiar el correo.
-- Enlaces a proyectos reales y verificables: estabaenlisboa.com y www.milsaboresbrunch.com.
-- Contacto `mailto:` con asunto y datos del proyecto a `josetabares24@gmail.com`. No existe un formulario con envío simulado.
-- Sin fotografías decorativas, falsos testimonios, logotipos de agencia ficticios ni flechas decorativas.
-- Las portadas tipográficas de proyectos no representan capturas de pantalla. Para futuras capturas se requiere obtener las reales con permiso.
+La propuesta se implementó como web navegable real, no como un PNG generado. Se conserva `main` sin cambios. La dirección visual es una interpretación nueva: tipografía protagonista, oscuro sobrio al inicio, trabajo existente primero, servicios concretos y contacto útil.
 
-## Desarrollo y pruebas
-```sh
-npm ci
-npm run build
-npm run lint
-npm run dev
-```
-Verificar ambas páginas a 390px y 1280/1440px; enlaces externos, enfoque de teclado, menú, contacto, tipografía y lectura.
+## URLs de la rama preview
+- ES: `/` o `/propuesta.html`
+- PT: `/pt/` o `/?lang=pt`
 
-## Human Web
-Consultada la documentación de dirección artística, decisiones, errores, copy, QA, servicios y expedientes de rediseños rechazados en [Human Webs Mega](https://github.com/josetabares24-png/human-webs-mega). El objetivo comercial y la lectura móvil priman sobre los adornos.
+El nombre público del negocio no está decidido; José Tabares es un identificador provisional.
 
-## Antes de pasar a producción
-- Confirmar el nombre, correo público y presupuesto orientativo con el propietario.
-- Revisar el despliegue real con fuentes y assets cargados.
-- Eliminar `noindex,nofollow` **solo cuando se apruebe publicar**, y añadir canonicals y hreflang absolutos para el dominio definitivo.
-- Si se quiere un formulario, integrar un backend probado con antispam y privacidad.
-- No fusionar sin aprobación de diseño ni QA.
+## Alcance
+- Portafolio compacto sin fotografías decorativas ni mockups de clientes inventados.
+- Trabajos reales: `https://estabaenlisboa.com/` y `https://www.milsaboresbrunch.com/`.
+- CTA de consulta que permite elegir entre nueva web, rediseño y orientación. El enlace crea un borrador en la aplicación de correo a `josetabares24@gmail.com`; **no envía por sí solo**.
+- Cambiador ES/PT, menú móvil accesible, HTML semántico, estilos y funciones autocontenidas (prototipo; antes de producción conviene separar estilos y plantillas).
+- Metadatos de robots `noindex,nofollow` mientras esté en revisión. No usar en producción antes de definir dominio, canonical e indexación.
+- Precio orientativo de web básica desde 150 € (sujeto a alcance), sin afirmar resultados garantizados de SEO.
+
+## Método / Human Web
+Documentación consultada: `AGENTS.md`, `memory/INDEX.md`, `memory/DECISIONS.md`, `memory/ART-DIRECTION.md`, `memory/VOICE-AND-COPY.md`, `memory/ERRORS.md` y `memory/QUALITY-GATES.md` en `josetabares24-png/human-webs-mega`.
+
+Se descartó reutilizar la dirección visual V3 (hero claro, sección oscura intermedia y dos cubiertas pseudo-visuales de proyectos). Se optó por una estructura con trabajo listado como evidencia enlazada y un bloque de contacto realmente accionable. La estética aún requiere evaluación del propietario.
+
+## Pruebas verificadas localmente
+Fuente local: `portfolio_v4/propuesta.html`; fuente de GitHub transferida desde ese mismo archivo para `index.html`, `pt/index.html` y `public/propuesta.html`.
+
+Playwright + Chromium:
+- Anchos 1440 y 390 px, sin scroll horizontal.
+- Sin errores JavaScript de página observados.
+- Selector de tipo de proyecto actualiza el enlace `mailto:`.
+- Cambio ES/PT modifica la interfaz y la etiqueta de idioma.
+- Menú móvil abre y cierra al navegar.
+- Enlaces a proyectos apuntan a los destinos previstos.
+
+Vercel informa compilación correcta del commit de la rama, pero la inspección visual **de la URL remota** permanece pendiente porque el navegador utilizado localmente no tuvo acceso externo a esa preview. No confundir compilación con aprobación.
+
+## Para pasar a producción
+- Confirmar diseño con el propietario.
+- Confirmar correo de recepción y alcance/precios comerciales.
+- Revisar la vista previa remota en móvil y escritorio.
+- Refactorizar HTML repetido a componentes/datos compartidos.
+- Crear rutas/SEO final, canonical/hreflang, accesibilidad y pruebas automatizadas estables.
+- Publicar únicamente con aprobación explícita.
