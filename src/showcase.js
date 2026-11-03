@@ -33,6 +33,10 @@ if(document.body.dataset.page==='home'){
     preview.dataset.project=row.dataset.project
     $('.cursor-name',preview).textContent=label
     $('.cursor-num',preview).textContent=row.dataset.project==='lisboa'?'01 /':'02 /'
+    const image=$('.cursor-preview-img',preview)
+    if(image){image.src=row.dataset.project==='lisboa'
+      ? 'https://raw.githubusercontent.com/josetabares24-png/portugal-autentico-v2/main/docs/qa/grok-2026-11-02/home-full-final-1440.jpg'
+      : 'https://raw.githubusercontent.com/josetabares24-png/milsabores/main/public/images/Mil%20Sabores/Brunch%20Americano.webp'}
     active=true;preview.classList.add('is-visible');if(!raf)raf=requestAnimationFrame(onFrame)
    })
    row.addEventListener('pointermove',e=>{tx=Math.max(10,Math.min(innerWidth-320,e.clientX+28));ty=Math.max(10,Math.min(innerHeight-230,e.clientY-70))})
