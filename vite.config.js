@@ -1,14 +1,15 @@
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+const root = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+  build: {
+    rollupOptions: {
+      input: {
+        es: path.resolve(root, 'index.html'),
+        pt: path.resolve(root, 'pt/index.html'),
+      },
     },
   },
 })
