@@ -247,7 +247,7 @@ function App() {
               <p>{t.intro}</p>
               <div className="hero-cta-row">
                 <a className="button button-dark" href={contactLink}>{t.heroCTA}</a>
-                <a className="text-link" href="#proyectos">{t.heroSecondary}<span aria-hidden="true">↗</span></a>
+                <a className="text-link" href="#proyectos">{t.heroSecondary}</a>
               </div>
             </div>
           </div>
@@ -274,7 +274,7 @@ function App() {
                   <BrowserArtwork project={project} t={t} />
                   <div className="project-info">
                     <div><h3>{project.title}</h3><p>{project.id === 'lisboa' ? t.project1Desc : t.project2Desc}</p></div>
-                    <a className="project-visit" href={project.url} target="_blank" rel="noopener noreferrer">{t.projectVisit}<span aria-hidden="true">↗</span><span className="sr-only">({project.domain})</span></a>
+                    <a className="project-visit" href={project.url} target="_blank" rel="noopener noreferrer">{t.projectVisit}<span className="sr-only">({project.domain})</span></a>
                   </div>
                 </article>
               ))}
