@@ -6,7 +6,7 @@ Incluye una home, dos casos reales, galería visual, índice interactivo, proces
 
 La dirección artística, el contrato de continuidad, las tres opciones estudiadas y los límites de pruebas están documentados en [`docs/DIRECCION-V6.md`](docs/DIRECCION-V6.md).
 
-**Importante:** las cubiertas de proyectos son composiciones gráficas originales, **no capturas de sus webs**. No se pudieron capturar los sitios externos en el entorno de revisión. Los enlaces llevan directamente a los sitios publicados. Esta fase no incluye vídeos auténticos de los proyectos. El email `josetabares24@gmail.com` debe confirmarse como buzón comercial antes de producción.
+**Actualización 3 noviembre 2026:** la galería y los casos ahora incorporan imágenes reales, con procedencia en [`docs/FUENTES-IMAGENES-V6.md`](docs/FUENTES-IMAGENES-V6.md). Estaba en Lisboa utiliza capturas auténticas de QA fechadas el 2 de noviembre; Mil Sabores utiliza fotografías de su propio repositorio. No hay capturas actuales de su interfaz ni vídeos grabados. Los recursos se cargan temporalmente desde GitHub Raw mientras no exista un proceso fiable de copia de imágenes binarias. La carga remota de imágenes todavía requiere QA visual. El email `josetabares24@gmail.com` debe confirmarse como buzón comercial antes de producción.
 
 El sitio usa Google Fonts Barlow Condensed y DM Sans, con fuentes de sistema de respaldo. En revisión usa `noindex,nofollow`; solo retirar tras autorizar publicar y fijar un dominio. No fusionar sin aprobar.
 
